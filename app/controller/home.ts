@@ -5,12 +5,14 @@ export default class HomeController extends Controller {
   public async login() {
     const { ctx } = this;
     const body = ctx.request.body;
+    console.log(ctx.cookies.get('login',{encrypt: true}));
     try {
       const result = await ctx.connection.getRepository(UserInfo)
                                           .createQueryBuilder("user")
                                           .where("user.username = :username AND user.password = :password", { username: body.username, password: body.password })
                                           .getOne();
                                           if(result){
+                                            ctx.cookies.set('login','true',{httpOnly: true, encrypt: true});
                                             ctx.body = {status:true,username:result.username};
                                           }else{
                                             ctx.body = {status:false};
