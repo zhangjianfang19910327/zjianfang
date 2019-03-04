@@ -1,0 +1,311 @@
+{
+  "keys": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+  "typeorm": {
+    "type": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "host": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "port": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "username": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "password": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "database": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "synchronize": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "entities": "d:\\zxjt\\zjianfang\\config\\config.default.ts"
+  },
+  "redis": {
+    "client": {
+      "port": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+      "host": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+      "password": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+      "db": "d:\\zxjt\\zjianfang\\config\\config.default.ts"
+    },
+    "default": "d:\\zxjt\\zjianfang\\node_modules\\egg-redis\\config\\config.default.js",
+    "app": "d:\\zxjt\\zjianfang\\node_modules\\egg-redis\\config\\config.default.js",
+    "agent": "d:\\zxjt\\zjianfang\\node_modules\\egg-redis\\config\\config.default.js",
+    "supportTimeCommand": "d:\\zxjt\\zjianfang\\node_modules\\egg-redis\\config\\config.default.js"
+  },
+  "middleware": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+  "security": {
+    "csrf": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+    "domainWhiteList": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "sourceUrl": "d:\\zxjt\\zjianfang\\config\\config.default.ts",
+  "session": {
+    "maxAge": "d:\\zxjt\\zjianfang\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "d:\\zxjt\\zjianfang\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "d:\\zxjt\\zjianfang\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "d:\\zxjt\\zjianfang\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "d:\\zxjt\\zjianfang\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "d:\\zxjt\\zjianfang\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "d:\\zxjt\\zjianfang\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "d:\\zxjt\\zjianfang\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "d:\\zxjt\\zjianfang\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "d:\\zxjt\\zjianfang\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "d:\\zxjt\\zjianfang\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "d:\\zxjt\\zjianfang\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "d:\\zxjt\\zjianfang\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "d:\\zxjt\\zjianfang\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "d:\\zxjt\\zjianfang\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "d:\\zxjt\\zjianfang\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "d:\\zxjt\\zjianfang\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "d:\\zxjt\\zjianfang\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "d:\\zxjt\\zjianfang\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "d:\\zxjt\\zjianfang\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "d:\\zxjt\\zjianfang\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "d:\\zxjt\\zjianfang\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "d:\\zxjt\\zjianfang\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "d:\\zxjt\\zjianfang\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "d:\\zxjt\\zjianfang\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "d:\\zxjt\\zjianfang\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "d:\\zxjt\\zjianfang\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "d:\\zxjt\\zjianfang\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "d:\\zxjt\\zjianfang\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "d:\\zxjt\\zjianfang\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "d:\\zxjt\\zjianfang\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "d:\\zxjt\\zjianfang\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "d:\\zxjt\\zjianfang\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "d:\\zxjt\\zjianfang\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "d:\\zxjt\\zjianfang\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "d:\\zxjt\\zjianfang\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "d:\\zxjt\\zjianfang\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "d:\\zxjt\\zjianfang\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "d:\\zxjt\\zjianfang\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "d:\\zxjt\\zjianfang\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "d:\\zxjt\\zjianfang\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "d:\\zxjt\\zjianfang\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "d:\\zxjt\\zjianfang\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "d:\\zxjt\\zjianfang\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "d:\\zxjt\\zjianfang\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "d:\\zxjt\\zjianfang\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "env": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "name": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "version": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "description": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "private": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "egg": {
+      "typescript": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "declarations": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "scripts": {
+      "start": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "stop": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "dev": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "debug": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "test-local": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "test": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "cov": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "tsc": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "ci": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "autod": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "lint": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "clean": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "egg": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "egg-fortypeorm": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "egg-redis": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "reflect-metadata": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "@types/mocha": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "@types/node": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "@types/supertest": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "autod": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "autod-egg": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "egg-ci": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "tslib": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "tslint": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "tslint-config-egg": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "typescript": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "engines": {
+      "node": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "ci": {
+      "version": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "repository": {
+      "type": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "url": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "eslintIgnore": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "author": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "license": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "baseDir": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "strict": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "depth": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "env": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "level": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "logging": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "port": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
+}
