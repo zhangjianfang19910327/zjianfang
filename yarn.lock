@@ -567,6 +567,11 @@ await-first@^1.0.0:
   dependencies:
     ee-first "^1.1.1"
 
+await-stream-ready@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/await-stream-ready/download/await-stream-ready-1.0.1.tgz#fa308c63fe14ac7a90966ad70822aa9369f8a6bb"
+  integrity sha1-+jCMY/4UrHqQlmrXCCKqk2n4prs=
+
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "http://registry.npm.taobao.org/babel-code-frame/download/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
