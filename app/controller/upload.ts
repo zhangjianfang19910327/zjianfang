@@ -3,6 +3,7 @@ const path =require('path');
 const fs=require('fs');
 import {write} from 'await-stream-ready';
 const sendToWormhole = require('stream-wormhole');
+
 export default class HomeController extends Controller {
     public async uploadImg() {
             const {ctx} = this;
@@ -27,7 +28,6 @@ export default class HomeController extends Controller {
     public async uploadImgAll() {
         const ctx = this.ctx;
         const parts = ctx.multipart();
-        console.log(ctx.headers);
         let part;
         // parts() 返回 promise 对象
         while ((part = await parts()) != null) {
@@ -35,9 +35,8 @@ export default class HomeController extends Controller {
             // 这是 busboy 的字段
             console.log('field: ' + part[0]);
             console.log('value: ' + part[1]);
-            console.log('valueTruncated: ' + part[2]);
-            console.log('fieldnameTruncated: ' + part[3]);
           } else {
+            console.log('--------------------\r\n',part,'\r\n-------------------\r\n')
             if (!part.filename) {
               // 这时是用户没有选择文件就点击了上传(part 是 file stream，但是 part.filename 为空)
               // 需要做出处理，例如给出错误提示消息
