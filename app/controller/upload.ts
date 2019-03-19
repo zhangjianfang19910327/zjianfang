@@ -3,6 +3,7 @@ const path =require('path');
 const fs=require('fs');
 import {write} from 'await-stream-ready';
 const sendToWormhole = require('stream-wormhole');
+
 export default class HomeController extends Controller {
     public async uploadImg() {
             const {ctx} = this;
@@ -27,15 +28,13 @@ export default class HomeController extends Controller {
     public async uploadImgAll() {
         const ctx = this.ctx;
         const parts = ctx.multipart();
-        console.log(ctx.headers);
         let part;
         while ((part = await parts()) != null) {
           if (part.length) {
             console.log('field: ' + part[0]);
             console.log('value: ' + part[1]);
-            console.log('valueTruncated: ' + part[2]);
-            console.log('fieldnameTruncated: ' + part[3]);
           } else {
+            console.log('--------------------\r\n',part,'\r\n-------------------\r\n')
             if (!part.filename) {
               return;
             }
