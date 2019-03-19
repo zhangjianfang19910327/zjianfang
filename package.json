@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "await-stream-ready": "^1.0.1",
+    "axios": "^0.18.0",
     "egg": "^2.6.1",
     "egg-fortypeorm": "^1.0.5",
     "egg-redis": "^2.3.0",

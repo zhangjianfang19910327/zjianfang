@@ -191,6 +191,7 @@
         "clean": "ets clean"
       },
       "dependencies": {
+        "await-stream-ready": "^1.0.1",
         "egg": "^2.6.1",
         "egg-fortypeorm": "^1.0.5",
         "egg-redis": "^2.3.0",

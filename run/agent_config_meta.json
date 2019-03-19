@@ -186,6 +186,7 @@
       "clean": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js"
     },
     "dependencies": {
+      "await-stream-ready": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
       "egg": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
       "egg-fortypeorm": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
       "egg-redis": "d:\\zxjt\\zjianfang\\node_modules\\egg\\config\\config.default.js",
