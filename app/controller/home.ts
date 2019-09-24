@@ -26,12 +26,23 @@ export default class HomeController extends Controller {
   public async register() {
     const { ctx, app} = this;
     const spm = "zjianfang"+ Math.ceil(Math.random()*10000000);
-    const body = JSON.stringify(ctx.request.body);
+    const body = JSON.stringify(ctx.request.body);//记录参数
     try {
-      const result= await app.redis.set(spm,body);
-      //const result= await app.redis.set(spm,body,'EX',1800);//设置过期时间ms
-      if(result=='ok'){
-        ctx.body = {status: true, spm: spm};
+      // const result= await app.redis.set(spm,body);
+      const result= await app.redis.set(spm,body,'EX',180000000000);//设置过期时间ms
+      if(result=='OK'){
+        const kafka=await new Promise((resolve,reject)=>{
+          ctx.producer.send([{ topic: 'topic1', messages:spm , partition: 0 }], function (err:any, data:any) {
+                  if(err){
+                    reject(err)
+                  }
+                  resolve(data);
+            });
+          });
+          console.log(kafka);
+        if(kafka){
+          ctx.body = {status: true, kafka: kafka};
+        }
       }else{
         ctx.body = {status: false,spm: spm};
       }
@@ -41,11 +52,20 @@ export default class HomeController extends Controller {
       console.log(error);
     }
   }
+  public async html() {
+    await this.ctx.render('index.html', {})
+  }
   // 点击注册连接
   public async spm() {
-    const { ctx, app} = this;
+    const { ctx ,app} = this;
     const spm :string=ctx.query.spm;
+    
     console.log(spm);
+    // ctx.cookies.set("name", "张三",{
+    //   maxAge: 24 * 3600 * 1000,
+    //   httpOnly: true, // by default it's true
+    //   encrypt: true, // 加密，并且可以设置为中文
+    // });
     try {
       const userinfostring :string= await app.redis.get(spm).then((data)=>{
         if(data==null){
@@ -53,8 +73,8 @@ export default class HomeController extends Controller {
         }
         return data;
       });
+      console.log("userinfostring:"+userinfostring);
       const userinfodata = JSON.parse(userinfostring);
-      console.log(userinfodata);
       let userinfo=new UserInfo();
       userinfo.username=userinfodata.username;
       userinfo.phonenumber=1;
@@ -62,10 +82,27 @@ export default class HomeController extends Controller {
       userinfo.description="";
       userinfo.password=userinfodata.password;
       const status = await ctx.connection.manager.save(userinfo);
-      console.log(spm,status);
       ctx.body = status;
     } catch (error) {
-      console.log(error);
+      ctx.body =await {flag:false};
     }
   }
+  // 点击注册连接
+  public async loginsStatus() {
+    const { ctx } = this;
+   const cookie=ctx.cookies.get('name',{encrypt: true});
+   
+    try{
+      if(cookie!=null){
+        ctx.body=await {status:true};
+      }else{
+        ctx.body=await {status:false};
+      }
+      
+    }
+    catch{
+      ctx.body=await {status:false};
+    }
+  }
+
 }

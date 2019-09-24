@@ -24,10 +24,13 @@
   "dependencies": {
     "await-stream-ready": "^1.0.1",
     "axios": "^0.18.0",
+    "browserfs": "^1.4.3",
     "egg": "^2.6.1",
     "egg-fortypeorm": "^1.0.5",
+    "egg-kafka-nodemailer": "^1.0.2",
     "egg-redis": "^2.3.0",
     "egg-scripts": "^2.6.0",
+    "egg-view-nunjucks": "^2.2.0",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="api/upload" target="myiframe" enctype="multipart/form-data" method="post">
+        <input multiple=true name='act' type='file' id='img'/>
+        <input type="submit" />
+    </form>
+    <iframe name="myiframe" id="myiframeid"></iframe>
+    <script>
+        var ifr=document.getElementById("myiframeid");
+        ifr.onload=function(a){
+            if(ifr.contentDocument){
+                
+                console.log(1,ifr.contentDocument.body.innerHTML)
+            }else if(ifr.contentWindow){
+
+                console.log(2,ifr.contentWindow.document.body.innerHTML)
+            }
+            
+        }
+    </script>
+</body>
+</html>

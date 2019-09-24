@@ -23,26 +23,27 @@ export default class HomeController extends Controller {
             throw err;
           }
           ctx.body = stream.fields;
+          console.log(ctx.body)
 
     }
     public async uploadImgAll() {
         const ctx = this.ctx;
+        // console.log(ctx.req)
         const parts = ctx.multipart();
         let part;
         while ((part = await parts()) != null) {
           if (part.length) {
-            console.log('field: ' + part[0]);
-            console.log('value: ' + part[1]);
+            // console.log('field: ' + part[0]);
+            // console.log('value: ' + part[1]);
           } else {
-            console.log('--------------------\r\n',part,'\r\n-------------------\r\n')
+            // console.log('--------------------\r\n',part,'\r\n-------------------\r\n')
             if (!part.filename) {
               return;
             }
-            console.log('field: ' + part.fieldname);
-            console.log('filename: ' + part.filename);
-            console.log('encoding: ' + part.encoding);
-            console.log('mime: ' + part.mime);
-            let result;
+            // console.log('field: ' + part.fieldname);
+            // console.log('filename: ' + part.filename);
+            // console.log('encoding: ' + part.encoding);
+            // console.log('mime: ' + part.mime);
             try {
                 const filename = Date.now() + '' + Math.ceil(Math.random() * 10000) + path.extname(part.filename);
                 const target = path.join(this.config.baseDir, 'app/public/', filename);
@@ -52,11 +53,12 @@ export default class HomeController extends Controller {
               await sendToWormhole(part);
               throw err;
             }
-            console.log(result,'jpg');
           }
         }
+        
         ctx.body ={result:true};
-        console.log('and we are done parsing the form!');
+        ctx.set("content-type","text/html");
+        // console.log('and we are done parsing the form!');
     }
     
 }
