@@ -1,5 +1,6 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 import {UserInfo} from "../app/entities/UserInfo";
+import {Article} from "../app/entities/Article";
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
 
@@ -14,7 +15,7 @@ export default (appInfo: EggAppInfo) => {
     password: "admin",
     database: "user",
     synchronize: true,
-    entities:[UserInfo]
+    entities:[UserInfo,Article]
    
   };
   config.view = {
