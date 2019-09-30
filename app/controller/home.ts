@@ -218,7 +218,7 @@ export default class HomeController extends Controller {
     try {
       const result = await ctx.connection.getRepository(Article)
         .createQueryBuilder("article")
-        .where("article.username = :username", { username: body.username})
+        .where("article.title = :title", { title: body.title})
         .getOne();
       
       if (result) {
