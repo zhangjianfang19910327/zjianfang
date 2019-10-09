@@ -9,8 +9,8 @@ export default class HomeController extends Controller {
     console.log(ctx.cookies.get('login', { encrypt: true }));
     try {
       const result = await ctx.connection.getRepository(UserInfo)
-        .createQueryBuilder("user")
-        .where("user.username = :username AND user.password = :password", { username: body.username, password: body.password })
+        .createQueryBuilder('user')
+        .where('user.username = :username AND user.password = :password', { username: body.username, password: body.password })
         .getOne();
       if (result) {
         ctx.cookies.set('login', 'true', { httpOnly: true, encrypt: true });
@@ -26,7 +26,7 @@ export default class HomeController extends Controller {
   // 注册
   public async register() {
     const { ctx, app } = this;
-    const spm = "zjianfang" + Math.ceil(Math.random() * 10000000);
+    const spm = 'zjianfang' + Math.ceil(Math.random() * 10000000);
     const body = JSON.stringify(ctx.request.body);//记录参数
     try {
       // const result= await app.redis.set(spm,body);
@@ -42,7 +42,7 @@ export default class HomeController extends Controller {
         });
 
         if (kafka) {
-          ctx.body = { status: true, kafka: kafka, msg: "请登录邮箱验证注册！" };
+          ctx.body = { status: true, kafka: kafka, msg: '请登录邮箱验证注册！' };
         }
       } else {
         ctx.body = { status: false, spm: spm };
@@ -50,7 +50,7 @@ export default class HomeController extends Controller {
       console.log(spm, result);
       console.log(body);
     } catch (error) {
-      ctx.body = { status: false, msg: "服务器内部错误！" }
+      ctx.body = { status: false, msg: '服务器内部错误！' }
     }
   }
   public async html() {
@@ -62,7 +62,7 @@ export default class HomeController extends Controller {
     const spm: string = ctx.query.spm;
 
     console.log(spm);
-    // ctx.cookies.set("name", "张三",{
+    // ctx.cookies.set('name', '张三',{
     //   maxAge: 24 * 3600 * 1000,
     //   httpOnly: true, // by default it's true
     //   encrypt: true, // 加密，并且可以设置为中文
@@ -74,13 +74,13 @@ export default class HomeController extends Controller {
         }
         return data;
       });
-      console.log("userinfostring:" + userinfostring);
+      console.log('userinfostring:' + userinfostring);
       const userinfodata = JSON.parse(userinfostring);
       let userinfo = new UserInfo();
       userinfo.username = userinfodata.username;
-      userinfo.phonenumber = "1";
+      userinfo.phonenumber = '1';
       userinfo.email = userinfodata.username;
-      userinfo.description = "";
+      userinfo.description = '';
       userinfo.password = userinfodata.password;
       const status = await ctx.connection.manager.save(userinfo);
       console.log(status)
@@ -122,15 +122,15 @@ export default class HomeController extends Controller {
       });
       let data = res.data.toString('utf8');
       const datajson: any = parsePara(data);
-      console.log("datajson:" + datajson);
+      console.log('datajson:' + datajson);
       const access_token = datajson.access_token;
       // const expires_in = datajson.expires_in;//过期时间
       // const refresh_token = datajson.refresh_token;//刷新token
       const res_access_token = await this.ctx.curl(open_id_url + access_token, {
         timeout: 3000
       });
-      const open_id_json = JSON.parse((res_access_token.data.toString('utf8')).replace(/(callback|\(|\)|\;)/g, ""));
-      console.log("open_id_json:" + open_id_json)
+      const open_id_json = JSON.parse((res_access_token.data.toString('utf8')).replace(/(callback|\(|\)|\;)/g, ''));
+      console.log('open_id_json:' + open_id_json)
       const openid = open_id_json.openid;
       let userinfo = await this.ctx.curl(`https://graph.qq.com/user/get_user_info?access_token=${access_token}&oauth_consumer_key=${client_id}&openid=${openid}`, {
         timeout: 3000
@@ -138,17 +138,17 @@ export default class HomeController extends Controller {
       userinfo = JSON.parse(userinfo.data.toString('utf8'));
       this.ctx.body = { login: true, userinfo: userinfo };
     } catch (e) {
-      this.ctx.body = { msg: "服务器内部异常!", errcode: "501" }
+      this.ctx.body = { msg: '服务器内部异常!', errcode: '501' }
     }
 
     // get请求字符串 转json
     function parsePara(e) {
       var t, n, r, i = e, s = {};
-      t = i.split("&"),
+      t = i.split('&'),
         r = null,
         n = null;
       for (var o in t) {
-        var u = t[o].indexOf("=");
+        var u = t[o].indexOf('=');
         u !== -1 && (r = t[o].substr(0, u),
           n = t[o].substr(u + 1),
           s[r] = n)
@@ -164,8 +164,8 @@ export default class HomeController extends Controller {
     const body = ctx.request.body;
     try {
       const result = await ctx.connection.getRepository(UserInfo)
-        .createQueryBuilder("user")
-        .where("user.username = :username", { username: body.username})
+        .createQueryBuilder('user')
+        .where('user.username = :username', { username: body.username})
         .getOne();
       console.log(result);
       if (result) {
@@ -173,16 +173,16 @@ export default class HomeController extends Controller {
         .createQueryBuilder()
         .update(UserInfo)
         .set({ password: body.password})
-        .where("username = :username", { username: body.username })
+        .where('username = :username', { username: body.username })
         .execute();
-        ctx.body = { status: true ,msg:"找到账号了",result:resultobj};
+        ctx.body = { status: true ,msg:'找到账号了',result:resultobj};
         console.log(true,result);
       } else {
         console.log(false,result);
-        ctx.body = { status: false ,msg:"您输入的账号尚未注册！"};
+        ctx.body = { status: false ,msg:'您输入的账号尚未注册！'};
       }
     } catch (error) {
-      ctx.body = { status: false ,msg:"服务器内部错误！" ,errcode:"501"};
+      ctx.body = { status: false ,msg:'服务器内部错误！' ,errcode:'501'};
     }
   }
   // updateHeadImg
@@ -191,18 +191,18 @@ export default class HomeController extends Controller {
     const body = ctx.request.body;
     try {
       const result = await ctx.connection.getRepository(UserInfo)
-        .createQueryBuilder("user")
-        .where("user.username = :username", { username: body.username})
+        .createQueryBuilder('user')
+        .where('user.username = :username', { username: body.username})
         .getOne();
       console.log(result);
       if (result) {
         console.log(typeof result)
       } else {
-        ctx.body = { status: false ,msg:"您输入的账号尚未注册！"};
+        ctx.body = { status: false ,msg:'您输入的账号尚未注册！'};
       }
       console.log(result);
     } catch (error) {
-      ctx.body = { status: false ,msg:"服务器内部错误！" ,errcode:"501"};
+      ctx.body = { status: false ,msg:'服务器内部错误！' ,errcode:'501'};
     }
   }
   // 发布文章 
@@ -217,20 +217,20 @@ export default class HomeController extends Controller {
     article.title = body.title;
     try {
       const result = await ctx.connection.getRepository(Article)
-        .createQueryBuilder("article")
-        .where("article.title = :title", { title: body.title})
+        .createQueryBuilder('article')
+        .where('article.title = :title', { title: body.title})
         .getOne();
       
       if (result) {
-        ctx.body={status:true,msg:"文章已存在！"}
+        ctx.body={status:true,msg:'文章已存在！'}
       }else{
         const status = await ctx.connection.manager.save(article);
-        ctx.body={status:true,msg:"文章保存成功！",info:status};
+        ctx.body={status:true,msg:'文章保存成功！',info:status};
       }
       
       
     } catch (error) {
-      ctx.body={status:false,msg:"文章保存失败！"}
+      ctx.body={status:false,msg:'文章保存失败！'}
     }
 
     
@@ -246,8 +246,8 @@ export default class HomeController extends Controller {
     article.conetent = body.conetent;
     try {
       const result = await ctx.connection.getRepository(Article)
-        .createQueryBuilder("article")
-        .where("article.title = :title", { title: body.title})
+        .createQueryBuilder('article')
+        .where('article.title = :title', { title: body.title})
         .getOne();
       console.log(result);
       if (result) {
@@ -255,14 +255,14 @@ export default class HomeController extends Controller {
         .createQueryBuilder()
         .update(Article)
         .set({ conetent: body.conetent})
-        .where("title = :title", { title: body.title })
+        .where('title = :title', { title: body.title })
         .execute();
-        ctx.body = { status: true ,msg:"文章更新成功",result:resultobj};
+        ctx.body = { status: true ,msg:'文章更新成功',result:resultobj};
       } else {
-        ctx.body = { status: false ,msg:"您的文章还未发表！"};
+        ctx.body = { status: false ,msg:'您的文章还未发表！'};
       }
     } catch (error) {
-      ctx.body = { status: false ,msg:"服务器内部错误！" ,errcode:"501"};
+      ctx.body = { status: false ,msg:'服务器内部错误！' ,errcode:'501'};
     }
 
     

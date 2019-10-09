@@ -17,9 +17,9 @@ export  class Article {
     @Column({nullable:true,default:""})
     topic: string;//主题
 
-    @Column()
+    @Column({type:"mediumtext"})
     conetent: string;//内容
-
+ 
     @CreateDateColumn()
     createdDate: Date;//创建时间
 
